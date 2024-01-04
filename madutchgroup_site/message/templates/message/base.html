@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="x-icon" href="{% static 'message/Madutch - Logo - Symbol.png' %}">
+    <link rel="stylesheet" href="{% static 'message/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'message/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'message/iconfont/material-icons.css' %}">
+    
+    {% if title %}
+        <title>Madutch - {{title}}</title>
+    {% else %}
+        <title>Madutch</title>
+    {% endif %}
+
+</head>
+<body>
+
+    <style>
+        .brand-logo {
+            font-weight: bolder;
+            top: 0;
+        }
+
+        .nav-wrapper{
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        
+        }
+
+        .lorem-text{
+            position:static;
+        }
+
+        .bold-font-weight{
+            font-weight: bolder;
+            display: inline-flex;
+            margin-left: 1%;
+        }
+
+        .hoverable:hover{
+            box-shadow: 2px 1.5px 20px 0 navy, -2px 1.5px 20px 0 navy;
+            transition: ease-in-out 0.5s;
+        }
+
+        .hoverable-orange:hover{
+            box-shadow: 2px 1.5px 20px 0 orangered, -2px 1.5px 20px 0 orangered;
+            transition: ease-in-out 0.5s;
+
+        }
+
+        #logo{
+            margin-top: 5%;
+            width: 200px;
+            height: inherit;
+            margin-bottom: 2%;
+        }
+
+        #logo-footer{
+            margin-top: 5%;
+            width: 400px;
+            height: inherit;
+            margin-bottom: 2%;
+        }
+
+        @media (max-width: 992px) {
+
+            #logo{
+                width: 200px;
+                height: inherit;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+            }
+            
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <nav class="nav-wrapper white col s12 m12 l12 xl12">
+        <div class="container">
+            <a href="{% url 'madutch-main' %}" class="brand-logo">
+                <img class="responsive-img" src="{{ user.logo.logo1.url }}" id="logo">
+            </a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons black-text">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#home" data-target="home">Home</a></li>
+                <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#about" data-target="about">About</a></li>
+                <li><a href="#" class="dropdown-trigger deep-orange-text text-darken-3 hoverable" data-target="dropdown-large">Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#contact" data-target="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a class="indigo-text text-darken-4 hoverable-orange" href="/#home" data-target="home">Home</a></li>
+        <li><a class="indigo-text text-darken-4 hoverable-orange" href="/#about" data-target="about">About</a></li>
+        <li><a href="#" class="dropdown-trigger indigo-text text-darken-3 hoverable-orange" data-target="dropdown-med-small">Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="indigo-text text-darken-4 hoverable-orange" href="/#contact" data-target="contact">Contact</a></li>
+    </ul>
+
+    <!-- Dropdown menu on large screens -->
+    <ul class="dropdown-content" id="dropdown-large">
+        <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#construction" data-target="construction" class="indigo-text text-darken-4 hoverable-orange">Property Development</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#cleaning" data-target="cleaning" class="indigo-text text-darken-4 hoverable-orange">Cleaning & Upholstery Cleaning Services</a></li>
+        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Manufacturing</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#landscaping" data-target="landscaping" class="indigo-text text-darken-4 hoverable-orange">Landscaping</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">General Supplies</a></li>
+        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Consulting</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#financial" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">Financial Services</a></li>
+    </ul>
+
+    <!-- Dropdown menu on medium and small screens -->
+    <ul class="dropdown-content" id="dropdown-med-small">
+        <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#construction" data-target="construction" class="indigo-text text-darken-4 hoverable-orange">Property Development</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#cleaning" data-target="cleaning" class="indigo-text text-darken-4 hoverable-orange truncate tooltipped" data-tooltip="Cleaning & Upholstery Cleaning Services">Cleaning & Upholstery Cleaning Services</a></li>
+        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Manufacturing</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#landscaping" data-target="landscaping" class="indigo-text text-darken-4 hoverable-orange">Landscaping</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">General Supplies</a></li>
+        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Consulting</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#financial" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">Financial Services</a></li>
+    </ul>
+
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    
+    {% block content%}{% endblock %}
+    
+
+
+    <script src="{% static 'message/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'message/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+            $('.dropdown-trigger').dropdown({
+                coverTrigger: true
+            });
+            $('.sidenav').sidenav();
+            $('.parallax').parallax();
+            $('.collapsible').collapsible();
+            $('.collapsible.expandable').collapsible({
+                accordion: false
+            });
+            $('.tooltipped').tooltip();
+            $('.slider').slider({
+                indicators: true,
+                height: 500,
+                transition: 500,
+                interval: 6000
+            });
+            $('.carousel.carousel-slider').carousel({
+                fullWidth:true,
+                autoplay: true
+            })
+            $('.modal').modal();
+            $('input.autocomplete').autocomplete({
+                data: {
+                    "Apple": null,
+                    "Microsoft": null
+                }
+            })
+        })
+    </script>
+</body>
+
+<footer class="page-footer grey lighten-2">
+    <div class="container center-align">
+        <div class="row">
+            <a href="{% url 'madutch-main' %}" class="brand-logo">
+                <img class="responsive-img" src="{{ user.logo.logo1.url }}" id="logo-footer">
+            </a>
+            
+            <div class="container">
+                <p class="black-text">The Madutch Group is a private company established in 2008 and a BEE Level 1 company</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright deep-orange darken-4">
+        <div class="container">&copy; 2023 Copyright Text</div>
+    </div>
+</footer>
+</html>

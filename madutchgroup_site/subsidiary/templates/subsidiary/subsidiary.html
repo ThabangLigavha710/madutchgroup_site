@@ -1,0 +1,535 @@
+{% extends 'message/base.html' %}
+{% block content %}
+
+<style>
+    #img-size{
+        height: 5%px;
+        width: 10%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .slider{
+        z-index: 1;
+    }
+
+    .content-shadow{
+        text-shadow: -12px 7px 30px grey;
+    }
+
+    #home-img{
+        width: 100%;
+    }
+
+    .content-shadow-2{
+        text-shadow: -12px 7px 30px rgba(128, 128, 128, 0.5);
+    }
+
+</style>
+
+<section>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="parallax-container">
+                <div class="parallax">
+                    <img src="{{ user.subsidiaryimage.welcomeImage.url }}" id="subsidiary" class="responsive-img">
+                </div>
+                <div class="container">
+                    <div class="box">
+                        <div class="col s12 m12 l12">
+                            <span><br></span>
+                            <span><br></span>
+                            <span><br></span>
+                            <span><br></span>
+                            <h1 class="text-shadow white-text center-align bold-font-weight content-shadow">Welcome to our subsidiaries page!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <span><br></span>
+            <span><br></span>
+            <span><br></span>
+            <span><br></span>
+        
+            <div class="card z-depth-0">
+                <h1 class="col l8 m12 s12 left-align">
+                    <div class="container">
+                        <b class="content-shadow-2">Beyond Boundaries: Our Diverse Services Catering to Your Every Need</b>
+                    </div>
+                </h1>
+                
+                <span><br></span>
+                <span><br></span>
+        
+                <div class="container">
+                    <p class="content-shadow-2" style="font-family: 'Gill Sans', 'Gill Sans MT'; font-size: 20px;">At Madutch Group, we take pride in offering a comprehensive suite of services to meet the varied needs of our clients. From construction that lays the foundation for your dreams, to meticulous cleaning and upholstery services ensuring pristine environments, our expertise extends to transformative landscaping that breathes life into spaces. Need reliable general supplies? Look no further. Our manufacturing capabilities promise quality and precision, while our consulting services guide you towards optimal solutions. At the heart of it all is our commitment to excellence, ensuring your satisfaction in every project we undertake.</p>
+                    <span><br></span>
+                    <span><br></span>
+                    <hr class="deep-orange left-align" style="width: 30%; height: 40px; position: relative; margin-left: 0;">
+                </div>
+        
+                <div class="card z-depth-0">
+        
+                    <div class="card-content">
+                        <div class="container">
+                            <div class="btn z-depth-0 white" id="home"></div>
+                        </div>
+                        <span>
+                            <br />
+                        </span>
+                        <span>
+                            <br />
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Property Development -->
+<section id="construction">
+    <div class="card z-depth-0">
+        <div class="card-content z-depth-0 right-align">
+            <div class="container">
+                <h1 class="right-align bold-font-weight indigo-text text-darken-4 content-shadow">Property</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Development</h1></span>
+            </div>
+
+            <div class="collapsible z-depth-0">
+                <ul class="collapsible popout">
+                    <li class="active">
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">construction</i><b class="deep-orange-text text-darken-4">Construction</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Residential and Commercial</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Road markings</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Building maintenance</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Erection of sports facilities</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Plumbing, Painting, Paving, Tiling, Electrical work, Fencing, Burglar</li>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.propertydevelopmentimage.propertyDevelopment1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.propertydevelopmentimage.propertyDevelopment2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.propertydevelopmentimage.propertyDevelopment3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.propertydevelopmentimage.propertyDevelopment4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.propertydevelopmentimage.propertyDevelopment5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cleaning & Upholstery Cleaning Services -->
+<section id="cleaning">
+    <div class="card z-depth-0">
+        <div class="card-content z-depth-0 right-align">
+            <div class="container">
+                <h1 class="right-align bold-font-weight indigo-text text-darken-4 content-shadow">Cleaning &</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Upholstery Cleaning Services</h1></span>
+            </div>
+
+            <div class="collapsible z-depth-0">
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">cleaning_services</i><b class="deep-orange-text text-darken-4">Cleaning & Upholstery</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Office and Home</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Deep Cleaning of Offices, Homes and Cars</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Upholstery Cleaning</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Fogging Services</li>
+                                <br>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.cleaningimage.cleaning1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.cleaningimage.cleaning2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.cleaningimage.cleaning3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.cleaningimage.cleaning4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.cleaningimage.cleaning5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Landscaping -->
+<section id="landscaping">
+    <div class="card z-depth-0">
+        <div class="card-content z-depth-0 right-align">
+            <div class="container">
+                <h1 class="right-align bold-font-weight indigo-text text-darken-4 content-shadow">Landscaping</h1>
+            </div>
+
+            <div class="collapsible z-depth-0">
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">landscape</i><b class="deep-orange-text text-darken-4">Landscaping</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Home and Commercial</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Landscape Design</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Lawn Maintenance</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Water Management</li>
+                                <br>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.landscapingimage.landscaping1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.landscapingimage.landscaping2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.landscapingimage.landscaping3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.landscapingimage.landscaping4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.landscapingimage.landscaping5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- General Supplies -->
+<section id="supplies">
+    <div class="card z-depth-0">
+        <div class="card-content z-depth-0 right-align">
+            <div class="container">
+                <h1 class="right-align bold-font-weight indigo-text text-darken-4 content-shadow">General</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Supplies</h1></span>
+            </div>
+
+            <div class="collapsible z-depth-0">
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">front_loader</i><b class="deep-orange-text text-darken-4">General Supplies</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Office and Home</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Supply and Deliver</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Home and Office stationery</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Office Furniture</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Office related equipment</li>
+                                <br>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.suppliesimage.supplies1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.suppliesimage.supplies2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.suppliesimage.supplies3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.suppliesimage.supplies4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.suppliesimage.supplies5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Financial Services -->
+<section id="financial">
+    <div class="card z-depth-0">
+        <div class="card-content z-depth-0 right-align">
+            <div class="container">
+                <h1 class="right-align bold-font-weight indigo-text text-darken-4 content-shadow">Financial</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Services</h1></span>
+            </div>
+
+            <div class="collapsible z-depth-0">
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">payments</i><b class="deep-orange-text text-darken-4">Accounting Services</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Accounting</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Annual financial statements</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Management accounts</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Monthly bookkeeping </li>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.accountingimage.accounting1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.accountingimage.accounting2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.accountingimage.accounting3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.accountingimage.accounting4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.accountingimage.accounting5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">receipt_long</i><b class="deep-orange-text text-darken-4">Payroll Services</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Accounting</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Monthly payroll processing</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Monthly payroll returns</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Bi-annuals EMP 501 reconciliations</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Monthly UIF declarations</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>PAYE, UIF and SDL registration</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Workmans compensation and COIDA registration and submission</li>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.payrollimage.payroll1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.payrollimage.payroll2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.payrollimage.payroll3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.payrollimage.payroll4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.payrollimage.payroll5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">percent</i><b class="deep-orange-text text-darken-4">Tax Services</b></div>
+                        <div class="collapsible-body left-align">                           
+                            <b>We offer services in:</b>
+                            <br>
+                            <br>
+                            <b class="indigo-text text-darken-4">Accounting</b>
+                            <ul class="left-align">
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Registration of income tax, provisional tax and VAT</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Submission of income tax, provisional tax and VAT</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Tax compliance status</li>
+                                <br>
+                                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                                <li>Income tax and VAT audits</li>
+                                <br>
+                                <br>
+                                <li class="z-depth-0">
+                                    <div class="slider z-depth-0">
+                                        <ul class="slides">
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.taximage.tax1.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.taximage.tax2.url }}" alt="">
+                                            </li>
+                        
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.taximage.tax3.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.taximage.tax4.url }}" alt="">
+                                            </li>
+
+                                            <li href="#" class="carousel-item">
+                                                <img class="responsive-img card-content" src="{{ user.taximage.tax5.url }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+{% endblock content %}
