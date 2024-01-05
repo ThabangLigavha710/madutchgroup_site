@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://madutchgroupsite-production.up.railway.app', 'https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ["https://*.up.railway.app", 'https://*.127.0.0.1']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -141,9 +141,10 @@ STATICFILES_FINDERS = (
     #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
 
-MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/media/'
-
+# MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.environ["RAILWAY_VOLUME_MOUNT_PATH"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
