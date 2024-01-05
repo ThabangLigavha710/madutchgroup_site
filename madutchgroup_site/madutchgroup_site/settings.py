@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import socket
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['madutchgroupsite-production.up.railway.app', 'https://*.127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['madutchgroupsite-production.up.railway.app','https://*.127.0.0.1']
@@ -127,6 +128,11 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    )
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
