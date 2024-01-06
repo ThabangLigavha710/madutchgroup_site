@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import socket
 
+import dj_database_url
+
 
 # import psycopg2
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,13 +26,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+#'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ["https://*.up.railway.app", 'https://*.127.0.0.1']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+
+
+CSRF_TRUSTED_ORIGINS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -93,6 +98,10 @@ DATABASES = {
         'PORT': '46889',
     }
 }
+
+database_url = os.environ.get('DATABASE_URL')
+DATABASES['default'] = dj_database_url.parse(database_url)
+
 
 
 # Password validation
