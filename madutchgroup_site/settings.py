@@ -27,8 +27,8 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
 SECRET_KEY = os.environ.get('SECRET_KEY')
-# SECRET_KEY = os.environ.get('SECRET_KEY')
 # 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -37,6 +37,7 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
 # ALLOWED_HOSTS = ['https://madutchgroup-site1.onrender.com']
+# ALLOWED_HOSTS = []
 
 
 CSRF_TRUSTED_ORIGINS = os.environ.get('ALLOWED_HOSTS').split(" ")
@@ -144,8 +145,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = 'staticfiles'
+STATIC_URL = os.environ.get('STATIC_URL')
+STATIC_ROOT = os.environ.get('STATIC_ROOT')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = 'staticfiles'
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'static'
 # ]
@@ -159,8 +162,10 @@ STATICFILES_FINDERS = (
     #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
 
-MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.environ.get('MEDIA_ROOT')
+MEDIA_URL = os.environ.get('MEDIA_URL')
+# MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = '/media/'
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = os.environ["RAILWAY_VOLUME_MOUNT_PATH"]
 
