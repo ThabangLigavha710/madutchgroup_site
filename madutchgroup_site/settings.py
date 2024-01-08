@@ -27,20 +27,21 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-s-!27hh4ttv19w%)!jx+%)-%lsrlvo(sjc1w+r(ge%(crltr+k'
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+# DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+DEBUG = False
 # DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
-# ALLOWED_HOSTS = ['https://madutchgroup-site1.onrender.com']
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = ['https://madutchgroup-site1.onrender.com', '127.0.0.1']
 # ALLOWED_HOSTS = []
 
 
-CSRF_TRUSTED_ORIGINS = os.environ.get('ALLOWED_HOSTS').split(" ")
+# CSRF_TRUSTED_ORIGINS = os.environ.get('ALLOWED_HOSTS').split(" ")
 # CSRF_TRUSTED_ORIGINS = ['https://madutchgroup-site1.onrender.com']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -105,9 +106,9 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get('DATABASE_URL')
-DATABASES['default'] = dj_database_url.parse(database_url)
-# DATABASES['default'] = dj_database_url.parse('postgres://madutch_database_user:brG4oMzgxlcSL3LwXXSVQQcW28lFQAqF@dpg-cmcl2l7109ks7390ioj0-a.oregon-postgres.render.com/madutch_database')
+# database_url = os.environ.get('DATABASE_URL')
+# DATABASES['default'] = dj_database_url.parse(database_url)
+DATABASES['default'] = dj_database_url.parse('postgres://madutch_database_user:brG4oMzgxlcSL3LwXXSVQQcW28lFQAqF@dpg-cmcl2l7109ks7390ioj0-a.oregon-postgres.render.com/madutch_database')
 
 
 
@@ -145,10 +146,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = os.environ.get('STATIC_URL')
-STATIC_ROOT = os.environ.get('STATIC_ROOT')
-# STATIC_URL = '/static/'
-# STATIC_ROOT = 'staticfiles'
+# STATIC_URL = os.environ.get('STATIC_URL')
+# STATIC_ROOT = os.environ.get('STATIC_ROOT')
+STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'static'
 # ]
@@ -162,10 +163,16 @@ STATICFILES_FINDERS = (
     #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
 
-MEDIA_ROOT = os.environ.get('MEDIA_ROOT')
-MEDIA_URL = os.environ.get('MEDIA_URL')
-# MEDIA_ROOT = BASE_DIR / 'media'
-# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.environ.get('MEDIA_ROOT')
+# MEDIA_URL = os.environ.get('MEDIA_URL')
+
+if DEBUG:
+    MEDIA_ROOT = BASE_DIR / 'message/static/media'
+    MEDIA_URL = 'media/'
+
+else:
+    MEDIA_ROOT = BASE_DIR / 'message/static/media'
+    MEDIA_URL = 'static/media/'
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = os.environ["RAILWAY_VOLUME_MOUNT_PATH"]
 
