@@ -85,20 +85,22 @@
         }
     </style>
 
-    <nav class="nav-wrapper white col s12 m12 l12 xl12">
-        <div class="container">
-            <a href="{% url 'madutch-main' %}" class="brand-logo">
-                <img class="responsive-img" src="{% static 'media/logo_images/logo_image_1.png' %}" id="logo">
-            </a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                <i class="material-icons black-text">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#home" data-target="home">Home</a></li>
-                <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#about" data-target="about">About</a></li>
-                <li><a href="#" class="dropdown-trigger deep-orange-text text-darken-3 hoverable" data-target="dropdown-large">Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#contact" data-target="contact">Contact</a></li>
-            </ul>
+    <nav>
+        <div class="nav-wrapper white col s12 m12 l12 xl12" width="100%">
+            <div class="container">
+                <a href="{% url 'madutch-main' %}" class="brand-logo">
+                    <img class="responsive-img" src="{% static 'media/logo_images/logo_image_1.png' %}" id="logo">
+                </a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons black-text">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#home" data-target="home">Home</a></li>
+                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#about" data-target="about">About</a></li>
+                    <li><a href="#" class="dropdown-trigger deep-orange-text text-darken-3 hoverable" data-target="dropdown-large">Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#contact" data-target="contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -159,11 +161,12 @@
                 accordion: false
             });
             $('.tooltipped').tooltip();
+            $('.materialboxed').materialbox();
             $('.slider').slider({
                 indicators: true,
                 // height: 500,
                 transition: 500,
-                interval: 6000
+                interval: 10000
             });
             $('.carousel.carousel-slider').carousel({
                 fullWidth:true,
