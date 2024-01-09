@@ -1,6 +1,8 @@
 {% extends 'message/base.html' %}
 {% block content %}
 
+{% load static %}
+
     <style>
         .top-space {
             margin-top: 40px;
@@ -62,7 +64,7 @@
                         <hr class="deep-orange left-align" style="width: 30%; height: 40px; position: relative; margin-left: 0;">
                     </h1>
                     <span>
-                        <img style="width: max-content; height: 20%;" src="{% 'static media/logo_images/logo_image_2.png' %}" id="home-img" class="col l6 m8 s12 responsive-img right-align">
+                        <img style="width: max-content; height: 20%;" src="{% static 'media/logo_images/logo_image_2.png' %}" id="home-img" class="col l6 m8 s12 responsive-img right-align">
                     </span>
                 </div>
             </div>
