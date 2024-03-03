@@ -28,8 +28,8 @@ admin.site.index_title = "Madutch Group Suppliers Administration"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('message.urls')),
-    path('subsidiary/', subsidiary_views.subsidiary, name="madutch-subsidiary")
-    # path('', include('subsidiary.urls'))
+    # path('services/', subsidiary_views.subsidiary, name="madutch-subsidiary")
+    path('services/', include('subsidiary.urls'))
 ] 
 
 if settings.DEBUG:

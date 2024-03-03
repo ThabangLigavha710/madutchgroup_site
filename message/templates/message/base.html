@@ -20,6 +20,12 @@
 <body>
 
     <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         .brand-logo {
             font-weight: bolder;
             top: 0;
@@ -32,6 +38,16 @@
         
         }
 
+        #img-3{
+        height: 274px;
+        width: 410px;
+    }
+
+
+        nav {
+            height: 100px;
+        }
+
         .lorem-text{
             position:static;
         }
@@ -39,7 +55,15 @@
         .bold-font-weight{
             font-weight: bolder;
             display: inline-flex;
-            margin-left: 1%;
+            /* margin-left: 1%; */
+        }
+
+        .alignment{
+            margin-left: 0;
+        }
+
+        #align-up{
+            margin-top: 4px;
         }
 
         .hoverable:hover{
@@ -55,9 +79,11 @@
 
         #logo{
             margin-top: 5%;
-            width: 200px;
+            width: 350px;
             height: inherit;
             margin-bottom: 2%;
+            margin-right: 7%;
+            margin-left: -9%;
         }
 
         #logo-footer{
@@ -67,10 +93,38 @@
             margin-bottom: 2%;
         }
 
+        #nav-list li{
+            margin-top: 5%;
+            margin-left: -10%;
+            padding-right: 10%;
+        }
+
+        .animate{
+            color: white;
+            font-size: 5vw;
+            -webkit-text-stroke: 0.3vh #bf360c;
+        }
+
+
+        @keyframes animate{
+            0%,10%,100%
+            {
+                width: 0;
+            }
+            70%,90%
+            {
+                width: 100%;
+            }
+        }
+
+        #nav-list li b{
+            font-size: 20px;
+        }
+        
         @media (max-width: 992px) {
 
             #logo{
-                width: 200px;
+                width: 350px;
                 height: inherit;
                 display: block;
                 margin-left: auto;
@@ -94,11 +148,11 @@
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons black-text">menu</i>
                 </a>
-                <ul class="right hide-on-med-and-down">
-                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#home" data-target="home">Home</a></li>
-                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#about" data-target="about">About</a></li>
-                    <li><a href="#" class="dropdown-trigger deep-orange-text text-darken-3 hoverable" data-target="dropdown-large">Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="/#contact" data-target="contact">Contact</a></li>
+                <ul class="right hide-on-med-and-down" id="nav-list">
+                    <li><a class="deep-orange-text text-darken-3 hoverable" href="/#home" data-target="home">Home</a></li>
+                    <li><a href="#" class="dropdown-trigger deep-orange-text text-darken-3 hoverable" data-target="dropdown-large">Services<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li ><a class="deep-orange-text text-darken-3 hoverable" href="{% url 'madutch-contact' %}" data-target="contact">Contact</a></li>
+                    <li><a class="white-text text-darken-3 hoverable btn deep-orange" href="/#about" data-target="about">B-BBEE</a></li>
                 </ul>
             </div>
         </div>
@@ -106,26 +160,25 @@
 
     <ul class="sidenav" id="mobile-links">
         <li><a class="indigo-text text-darken-4 hoverable-orange" href="/#home" data-target="home">Home</a></li>
-        <li><a class="indigo-text text-darken-4 hoverable-orange" href="/#about" data-target="about">About</a></li>
-        <li><a href="#" class="dropdown-trigger indigo-text text-darken-3 hoverable-orange" data-target="dropdown-med-small">Our Services<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="indigo-text text-darken-4 hoverable-orange" href="/#contact" data-target="contact">Contact</a></li>
+        <li><a href="#" class="dropdown-trigger indigo-text text-darken-3 hoverable-orange" data-target="dropdown-med-small">Services<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="indigo-text text-darken-4 hoverable-orange" href="{% url 'madutch-contact' %}" data-target="contact">Contact</a></li>
     </ul>
 
     <!-- Dropdown menu on large screens -->
     <ul class="dropdown-content" id="dropdown-large">
-        <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#construction" data-target="construction" class="indigo-text text-darken-4 hoverable-orange">Property Development</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#cleaning" data-target="cleaning" class="indigo-text text-darken-4 hoverable-orange">Cleaning & Upholstery Cleaning Services</a></li>
-        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Manufacturing</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#landscaping" data-target="landscaping" class="indigo-text text-darken-4 hoverable-orange">Landscaping</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">General Supplies</a></li>
-        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Consulting</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#financial" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">Financial Services</a></li>
+        <!-- <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li> -->
+        <li><a href="{% url 'madutch-subsidiary' %}#construction" data-target="construction" class="indigo-text text-darken-4">Property Development</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#cleaning" data-target="cleaning" class="indigo-text text-darken-4">Cleaning & Upholstery Cleaning Services</a></li>
+        <li><a href="#!" data-target="" class="indigo-text text-darken-4">Manufacturing</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#landscaping" data-target="landscaping" class="indigo-text text-darken-4">Landscaping</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4">General Supplies</a></li>
+        <li><a href="#!" data-target="" class="indigo-text text-darken-4">Consulting</a></li>
+        <li><a href="{% url 'madutch-subsidiary' %}#financial" data-target="supplies" class="indigo-text text-darken-4">Financial Services</a></li>
     </ul>
 
     <!-- Dropdown menu on medium and small screens -->
     <ul class="dropdown-content" id="dropdown-med-small">
-        <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li>
+        <!-- <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li> -->
         <li><a href="{% url 'madutch-subsidiary' %}#construction" data-target="construction" class="indigo-text text-darken-4 hoverable-orange">Property Development</a></li>
         <li><a href="{% url 'madutch-subsidiary' %}#cleaning" data-target="cleaning" class="indigo-text text-darken-4 hoverable-orange truncate tooltipped" data-tooltip="Cleaning & Upholstery Cleaning Services">Cleaning & Upholstery Cleaning Services</a></li>
         <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Manufacturing</a></li>
@@ -133,7 +186,8 @@
         <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">General Supplies</a></li>
         <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Consulting</a></li>
         <li><a href="{% url 'madutch-subsidiary' %}#financial" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">Financial Services</a></li>
-    </ul>
+    </ul> 
+
 
     {% if messages %}
         {% for message in messages %}
@@ -181,9 +235,16 @@
             })
         })
     </script>
+
 </body>
 
 <footer class="page-footer grey lighten-2">
+    <div class="center-align">
+        <div class="btn-floating btn-large waves-effect waves-light deep-orange">
+            <a href="#"><i class="material-icons white-text">arrow_upward</i></a>
+        </div>
+        <h5 class="black-text">Back</h5>
+    </div>
     <div class="container center-align">
         <div class="row">
             <a href="{% url 'madutch-main' %}" class="brand-logo">

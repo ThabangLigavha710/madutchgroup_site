@@ -6,22 +6,6 @@ from madutchgroup_site import settings
 import random
 
 
-# def rename_file(file_path, file_name):
-
-#     # path = os.path.join(settings.MEDIA_ROOT, file_path)
-#     path = os.chdir(file_path)
-
-#     filename = file_name
-
-#     i = 1
-
-#     for file in os.listdir(path):
-#         new_file_name = filename + "_{}.jpg".format(i)
-#         os.rename(file, new_file_name)
-
-#         i = i + 1
-
-#     return
 
 def rename_file(path, image_name, number):
 
@@ -38,4 +22,4 @@ def rename_file(path, image_name, number):
             filename = '{}.{}'.format(instance.pk, ext)
         # return the whole path to the file
         return os.path.join(path, filename)
-    return wrapper
+    return

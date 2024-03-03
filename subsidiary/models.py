@@ -32,6 +32,7 @@ class HomeImage(models.Model):
 
 class PropertyDevelopmentImage(models.Model):
     user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    welcomeImage = models.ImageField(default='default.jpg', upload_to=rename.rename_file('property_development_images', 'welcome_image', 0))
     propertyDevelopment1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('property_development_images', 'property_development_image', 1))
     propertyDevelopment2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('property_development_images', 'property_development_image', 2))
     propertyDevelopment3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('property_development_images', 'property_development_image', 3))
@@ -44,6 +45,7 @@ class PropertyDevelopmentImage(models.Model):
 
 class CleaningImage(models.Model):
     user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    welcomeImage = models.ImageField(default='default.jpg', upload_to=rename.rename_file('cleaning_images', 'welcome_image', 0))
     cleaning1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('cleaning_images', 'cleaning_image', 1))
     cleaning2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('cleaning_images', 'cleaning_image', 2))
     cleaning3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('cleaning_images', 'cleaning_image', 3))
@@ -56,6 +58,7 @@ class CleaningImage(models.Model):
 
 class LandscapingImage(models.Model):
     user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    welcomeImage = models.ImageField(default='default.jpg', upload_to=rename.rename_file('landscaping_images', 'welcome_image', 0))
     landscaping1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('landscaping_images', 'landscaping_image', 1))
     landscaping2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('landscaping_images', 'landscaping_image', 2))
     landscaping3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('landscaping_images', 'landscaping_image', 3))
@@ -68,6 +71,7 @@ class LandscapingImage(models.Model):
 
 class SuppliesImage(models.Model):
     user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    WelcomeImage = models.ImageField(default='default.jpg', upload_to=rename.rename_file('supplies_images','welcome_image', 0))
     supplies1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('supplies_images','supplies_image', 1))
     supplies2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('supplies_images','supplies_image', 2))
     supplies3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('supplies_images','supplies_image', 3))
@@ -80,6 +84,7 @@ class SuppliesImage(models.Model):
 
 class AccountingImage(models.Model):
     user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    welcomeImage = models.ImageField(default='default.jpg', upload_to=rename.rename_file('accounting_images', 'welcome_image', 0))
     accounting1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('accounting_images', 'accounting_pic', 1))
     accounting2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('accounting_images', 'accounting_pic', 2))
     accounting3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('accounting_images', 'accounting_pic', 3))
@@ -114,3 +119,15 @@ class TaxImage(models.Model):
 
     def __self__(self):
         return f'{self.user.username} TaxImage'
+    
+
+class BusinessConsultingImage(models.Model):
+    user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    tax1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('business_consulting_images','business_consulting_image', 1))
+    tax2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('business_consulting_images','business_consulting_image', 2))
+    tax3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('business_consulting_images','business_consulting_image', 3))
+    tax4 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('business_consulting_images','business_consulting_image', 4))
+    tax5 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('business_consulting_images','business_consulting_image', 5))
+
+    def __self__(self):
+        return f'{self.user.username} BusinessConsultingImage'

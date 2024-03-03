@@ -1,0 +1,211 @@
+{% extends 'message/base.html' %}
+{% block content %}
+
+{% load static %}
+
+    <style>
+        .top-space {
+            margin-top: 40px;
+            position: static;
+        }
+
+        #home-img{
+            width: 100%;
+        }
+
+        .box{
+            width: 100%;
+            height: auto;
+            margin-top: 20%;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-shadow{
+            text-shadow: -12px 7px 25px black;
+        }
+
+        .content-shadow{
+            text-shadow: -12px 7px 30px grey;
+        }
+
+        #BBEE{
+            margin-left: 18px;
+        }
+
+        .content-shadow-2{
+        text-shadow: -12px 7px 30px rgba(128, 128, 128, 0.5);
+        }   
+        
+        .space-box{
+            width: auto;
+            margin: 3%;
+            position: relative;
+        }
+        
+        /* #map{
+            margin-left: -120px;
+            
+        } */
+
+        #contact-details{
+            margin-left: 14px;
+        }
+
+        .animate::before{
+            content: attr(data-text);
+            position: absolute;
+            color: #bf360c;
+            width: 0;
+            height: 50%;
+            -webkit-text-stroke: transparent;
+            /* border-right: 2px solid #bf360c; */
+            overflow: hidden;
+            animation: animate 7s linear;
+
+        }
+
+        .animate::after{
+            content: attr(data-text);
+            position: absolute;
+            color: #1a237e;
+            width: 0;
+            height: 50%;
+            -webkit-text-stroke: transparent;
+            /* border-right: 2px solid #bf360c; */
+            overflow: hidden;
+            animation: animate 7.1s linear;
+
+        }
+
+        
+
+        /* #contact-form{
+            margin-right: -100px;
+            padding-left: -200px;
+            /* margin-left: 200px;
+         }  */
+
+    </style>
+
+    <!-- Home Section -->
+    <section>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="{% static 'media/home_images/home_image_3.jpg' %}" id="home-img" class="responsive-img">
+            </div>
+            <div class="container">
+                <div class="box">
+                    <div class="col s12 m12 l12">
+                        <h1 data-text="Welcome to our contact page" class="text-shadow animate white-text center-align bold-font-weight">Welcome to our contact page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="card z-depth-0">
+            <div class="card-content left-align">
+                <!-- <div class="container"> -->
+                    <h1 class="left-align bold-font-weight indigo-text text-darken-4 content-shadow">Contact</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Us</h1>
+                        <hr class="indigo left-align" style="width: 23%; height: 20px; position: relative; margin-left: 1px;">
+                    </span>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        
+        <!-- <div class="container"> -->
+            <div id="contact-details" class="row">
+                <div class="col s12 m4 l4">
+                    <ul>
+                        <li>
+                            <div class="deep-orange-text text-darken-4"><h5><b>Phone</b></h5></div>
+                            <br>
+                            <div class="left-align"><i class="material-icons left indigo-text text-darken-4">phone</i><b>010 745 3949</b></div>
+                            <br>
+                        </li>
+                        <div class="divider"></div>
+                        <li>
+                            <div class="deep-orange-text text-darken-4"><h5><b>Email</b></h5></div>
+                            <br>
+                            <div class="left-align"><i class="material-icons left indigo-text text-darken-4">email</i><b>madutchgroup@gmail.com</b></div>
+                            <br>
+                        </li>
+                        <div class="divider"></div>
+                        <li>
+                            <div class="deep-orange-text text-darken-4"><h5><b>Address</b></h5></div>
+                            <br>
+                            <div class="left-align"><i class="material-icons left indigo-text text-darken-4">map</i><b>Address - 52 Vorster Avenue Vista Place Suite LG 4, Glenanda, 2091</b></div>
+                            <br>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <div class="row">
+                    <div class=" center-align col s12 m1 l1">
+
+                    </div>
+                </div> -->
+
+                <div id="contact-form" class="row">
+                    <div class="right-align col s12 m5 l5 offset-m2 offset-l2">
+                        <div class="left-align deep-orange-text text-darken-4"><h5><b>Fill the form below</b></h5></div>
+                        <form name="message_form" method="POST" class="col s12">
+                            {% csrf_token %}
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="input-field col s6 m6 l6">
+                                            {{form.first_name}}
+                                        </div>
+                                        <div class="input-field col s6 m6 l6">
+                                            {{form.last_name}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons indigo-text text-darken-4 prefix">phone</i>
+                                            {{form.phone_number}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons indigo-text text-darken-4 prefix">email</i>
+                                            {{form.email}}
+                                        </div>
+                                    </div>
+            
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons indigo-text text-darken-4 prefix">mode_edit</i>
+                                            {{form.message}}</textarea>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="modal-footer"> -->
+                                    <button type="submit" name="action" onclick="M.toast({html:'Message submitted'}, 'rounded')" class="btn deep-orange darken-4 waves-effect waves-lighten">Send<i class="material-icons right">send</i></button>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.6755118926503!2d28.0368419754176!3d-26.272192777034814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f4253c37597%3A0x9902464eb34da42d!2s52%20Vorster%20Ave%2C%20Glenanda%2C%20Johannesburg%20South%2C%202091!5e0!3m2!1sen!2sza!4v1708961399079!5m2!1sen!2sza" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- </div> -->
+    </section>
+
+{% endblock content %}

@@ -9,6 +9,14 @@
             position: static;
         }
 
+        .big-size{
+            font-size: 40px;
+        }
+
+        .big-size-1{
+            font-size: 100px;
+        }
+
         #home-img{
             width: 100%;
         }
@@ -16,7 +24,7 @@
         .box{
             width: 100%;
             height: auto;
-            margin-top: 20%;
+            margin-top: 5%;
             margin-bottom: auto;
             margin-left: auto;
             margin-right: auto;
@@ -26,18 +34,96 @@
             text-shadow: -12px 7px 25px black;
         }
 
+        /* .align-about{
+            margin-left: 0px;
+        } */
+
         .content-shadow{
-            text-shadow: -12px 7px 30px grey;
+            text-shadow: -12px 7px 30px rgb(146, 143, 143);
+        }
+
+        .align-flag{
+            margin-left: -7px;
+        }
+
+        .align-cam{
+            margin-left: -2px;
+        }
+
+        #BBEE{
+            margin-left: 18px;
+            font-size: larger;
+        }
+        .large-font{
+            /* margin-left: 18px; */
+            font-size: larger;
         }
 
         .content-shadow-2{
-        text-shadow: -12px 7px 30px rgba(128, 128, 128, 0.5);
+        text-shadow: -12px 7px 30px rgba(146, 143, 143, 0.5);
         }   
         
         .space-box{
             width: auto;
             margin: 3%;
             position: relative;
+        }
+
+        
+
+        #values{
+            margin-left: 60%;
+            margin-right: 0;
+            margin-top: -400px;
+            width: 540px;
+            height: 550px;
+            position: relative;
+        }
+
+        #vision{
+            margin-left: -254px;
+            margin-top: -10px;
+            /* font-size: large; */
+        }
+
+        #vision-1{
+            margin-left: -12px;
+            margin-top: -11px;
+            /* font-size: large; */
+        }
+
+        #origin{
+            font-size: larger;
+        }
+
+        .f-weight{
+        font-size: 8vw;
+    }
+
+        .animate::before{
+            content: attr(data-text);
+            position: absolute;
+            color: #bf360c;
+            width: 0;
+            height: 100%;
+            -webkit-text-stroke: transparent;
+            /* border-right: 2px solid #bf360c; */
+            overflow: hidden;
+            animation: animate 5s linear;
+
+        }
+
+        .animate::after{
+            content: attr(data-text);
+            position: absolute;
+            color: #1a237e;
+            width: 0;
+            height: 100%;
+            -webkit-text-stroke: transparent;
+            /* border-right: 2px solid #bf360c; */
+            overflow: hidden;
+            animation: animate 5.1s linear;
+
         }
     </style>
 
@@ -49,8 +135,8 @@
             </div>
             <div class="container">
                 <div class="box">
-                    <div class="col s12 m6 l4">
-                        <h1 class="text-shadow white-text center-align bold-font-weight">Welcome to our home page!</h1>
+                    <div class="col s12 m12 l12">
+                        <h1 data-text="Welcome to our home page!" class="text-shadow animate white-text center-align f-weight bold-font-weight">Welcome to our home page!</h1>
                         <p class="text-shadow white-text center-align truncate">The <b>MADUTCH GROUP</b> originated within the construction sector specializing in general construction, road markings, building maintenance, erection of sports facilities, plumbing, panting, paving, tiling, electrical work, fencing, burglar proofing, residential renovations. remodeling and erection of homes, offices in the era of modern designs.</p><a href="#home" class="btn deep-orange darken-4 white-text waves-effect">Read More</a>
                     </div>
                 </div>
@@ -60,230 +146,103 @@
             <div class="row z-depth-0">
                 <div style="margin-top: 10%;" class="card-content">
                     <h1 class="col l6 m8 s12 left-align">
-                        <b class="content-shadow-2">Building Dreams: Your Trusted Partner in Construction Excellence</b>
-                        <hr class="deep-orange left-align" style="width: 30%; height: 40px; position: relative; margin-left: 0;">
+                        <b class="content-shadow-2">A Greater Need For Diversity:</b>
+                        Building a Brighter Future Together
+                        <hr class="deep-orange left-align" style="width: 30%; height: 40px; position: relative; margin-left: 0; margin-top: 7px;">
                     </h1>
                     <span>
                         <img style="width: max-content; height: 20%;" src="{% static 'media/logo_images/logo_image_2.png' %}" id="home-img" class="col l6 m8 s12 responsive-img right-align">
                     </span>
                 </div>
             </div>
-
-            <div class="card z-depth-0">
-
-                <div class="card-content">
-                    <div class="container">
-                        <div class="btn z-depth-0 white" id="home"></div>
-                    </div>
-                    <div class="hide-on-med-and-down">
-                        <hr class="indigo left-align" style="width: 1.5%; height: 50px; position: absolute; margin-left: 12%; margin-top: -20px;">
-                    </div>
-                    <div class="hide-on-large-only">
-                        <hr class="indigo left-align" style="width: 2%; height: 40px; position: absolute; margin-left: 0px; margin-top: -20px;">
-                        <span></span>
-                    </div>
-                    <div class="container">
-                        <h6 class="card card-content content-shadow-2" style="font-family: 'Gill Sans', 'Gill Sans MT';">The <b>MADUTCH GROUP</b> originated within the construction sector specializing in general construction, road markings, building maintenance, erection of sports facilities, plumbing, panting, paving, tiling, electrical work, fencing, burglar proofing, residential renovations. remodeling and erection of homes, offices in the era of modern designs. <br />
-    
-                        Madutch Property Development subsidiary has the ability to provide market leading industry knowledge, experience and expertise in the construction sector. <br />
-        
-                        The business later added subsidiary companies to the profile transformed it from what started as purely a construction company to a group of companies in aid to 
-                        create jobs as well as create a one stop consortium for its clients. <br />
-        
-                        The additional services expands THE <b>MADUTCH GROUP</b> to specialize in General Supplies (General Home & Office Supplies), Consulting, Manufacturing 
-                        (Households detergents), Cleaning and Upholstery and Landscaping. </h6>
-                    </div>
-                    <div class="hide-on-med-and-down">
-                        <hr class="indigo right-align" style="width: 1.5%; height: 50px; position: absolute; margin-left: 83%; margin-top: -40px;">
-                    </div>
-                    <div class="hide-on-large-only">
-                        <hr class="indigo right-align" style="width: 2%; height: 40px; position: absolute; margin-left: 95%; margin-top: -40px;">
-                    </div>
-                    <span><br></span>
-                    <span><br></span>
-                    <span><br></span>
-                </div>
-            </div>
         </div>
+
     </section>
 
-
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="{% static 'media/home_images/home_image_2.jpg' %}" class="responsive-img">
-        </div>
-    </div>
-
-
-    <span><br></span>
-    <span><br></span>
-    <span><br></span>
     <!-- About Section -->
     <section id="about">
         <div class="card z-depth-0">
-            <div class="card-content right-align">
-                <div class="container">
-                    <h1 class="right-align bold-font-weight indigo-text text-darken-4 content-shadow">About</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Us</h1>
-                        <hr class="deep-orange right-align" style="width: 20%; height: 20px; position: relative; margin-right: 0;"></span>
-                </div>
-                <div class="container">
-                    <ul class="collapsible popout">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">flag</i><b class="deep-orange-text text-darken-4">Mission</b></div>
-                            <div class="collapsible-body left-align"><span>The Madutch Group is determine to contribute to the economy of the country by aiding the government's initiatives in community development project, market growth, profitability, employee well being and positive client sentiments. The Madutch Group is deter mined to transfer skills sets to persons who want to excel, providing homes of quality, assist in elevating poverty stricken areas and contribute to the safety of our country.</span></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="container">
-                    <ul class="collapsible popout">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">camera_video</i><b class="deep-orange-text text-darken-4">Vision</b></div>
-                            <div class="collapsible-body left-align"><span>The Madutch Group aims in being the leading service provider within each segments industry expanding within RSA and the rest of Africa, sustainable growth and improving customer satisfaction. One of the groups key focus is to rectify our countries imbalances by adopting the Employment Equity Act focusing on race, gender equality, youth development and comm unity Job creation. By addressing this key element the group determined to ens ure that MADUTCH to the lives of ordinary people.</span></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="container">
-                    <ul class="collapsible popout">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons indigo-text text-darken-4">scale</i><b class="deep-orange-text text-darken-4">Values</b></div>
-                            <div class="collapsible-body left-align"><span>INTEGRITY I PROFESSIONALISM I TRANSPARENCY I EXCELLENCE</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <span><br></span>
-            <span><br></span>
-            <span><br></span>
-
-            <div class="card z-depth-0">
-                <div class="hide-on-med-and-down">
-                    <hr class="deep-orange left-align" style="width: 1.5%; height: 50px; position: absolute; margin-left: 12%; margin-top: -20px;">
-                </div>
-                <div class="hide-on-large-only">
-                    <hr class="deep-orange left-align" style="width: 2%; height: 40px; position: absolute; margin-left: 0px; margin-top: -20px;">
-                    <span></span>
-                </div>
-                <div class="card-content left-align">
-                    <div class="container">
-                        <h3 class="bold-font-weight indigo-text text-darken-4 content-shadow"><b>MADUTCH GROUP's</b></h3><span><h3 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">EXCO TEAM HISTORY</h3></span>
-                    </div>
-                </div>
-                <div class="container">
-                    <p class="content-shadow center-align">The Madutch Group is a Level 1 BEE owned organization. Our Directors are young, dynamic and innovative who where previously disadvantaged individuals who has over the years to detach from the stigma associated to the being previously disadvantaged. Over the years they have delivered and maintained high service standards delivering projects and products with knowledge and professionalism.</p>
-                </div>
-
-                <div class="hide-on-med-and-down">
-                    <hr class="deep-orange right-align" style="width: 1.5%; height: 50px; position: absolute; margin-left: 87%; margin-top: -40px;">
-                </div>
-                <div class="hide-on-large-only">
-                    <hr class="deep-orange right-align" style="width: 2%; height: 40px; position: absolute; margin-left: 95%; margin-top: 0px;">
-                </div>
-
-                <span><br></span>
-                <span><br></span>
-                <span><br></span>
-
-            </div>
-        </div>
-
-
-        <span><br></span>
-        <span><br></span>
-        <span><br></span>
-
-
-        <div class="container">
-            <div class="transparent space-box"></div>
-        </div>
-
-        <div class="col s12 m6 l6">
-            <div class="parallax-container">
-                <div class="parallax">
-                    <img src="{% static 'media/home_images/home_image_3.jpg' %}" class="responsive-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="card z-depth-0">
             <div class="card-content left-align">
-                <div class="container">
-                    <h1 class="left-align bold-font-weight indigo-text text-darken-4 content-shadow">Contact</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Us</h1>
-                        <hr class="indigo left-align" style="width: 17%; height: 20px; position: relative; margin-left: 0;">
-                    </span>
+                
+                
+                <div class="row">
+                    <div class="col s12 m12 l12 content-shadow-2">
+                        <h1 class="left-align bold-font-weight indigo-text text-darken-4 content-shadow">About</h1><span>
+                            <h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Us</h1>
+                            <hr class="deep-orange left-align" style="width: 20%; height: 20px; position: relative; margin-left: 1px;">
+                        </span>
+                        <br>
+                        <p class="align-about content-shadow-2 z-depth-0 large-font">The <b>MADUTCH GROUP</b> originated within the construction sector specializing in general construction, road markings, building maintenance, erection of sports facilities, plumbing, panting, paving, tiling, electrical work, fencing, burglar proofing, residential renovations. remodeling and erection of homes, offices in the era of modern designs. <br/><br/>
+            
+                        Madutch Property Development subsidiary has the ability to provide market leading industry knowledge, experience and expertise in the construction sector. <br/><br/>
+        
+                        The business later added subsidiary companies to the profile transformed it from what started as purely a construction company to a group of companies in aid to 
+                        create jobs as well as create a one stop consortium for its clients. <br/><br/>
+        
+                        The additional services expands The <b>MADUTCH GROUP</b> to specialize in General Supplies (General Home & Office Supplies), Consulting, Manufacturing 
+                        (Households detergents), Cleaning and Upholstery and Landscaping. </p>
+                        <br>
+                        <br>
+                        <h4 class="bold-font-weight indigo-text text-darken-4 content-shadow">Our</h4><span><h4 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">History</h4></span>
+                        <br>
+                        <p class="content-shadow-2 left-align large-font">The Madutch Group is a Level 1 BEE owned organization. Our Directors are young, dynamic and innovative who where previously disadvantaged individuals who has over the years to detach from the stigma associated to the being previously disadvantaged. Over the years they have delivered and maintained high service standards delivering projects and products with knowledge and professionalism.</p>   
+                    </div>
+                </div>
+                <br>
+                <br>
+    
+                <!-- <div class="container"> -->
+                <div class="row">
+                    <div class="col s12 m12 l12 content-shadow-2">
+                        <b class="bold-font-weight big-size deep-orange-text text-darken-4 content-shadow" id="vision-1">Mission</b>
+                        <span>
+                            <i class="bold-font-weight align-flag big-size material-icons indigo-text text-darken-4 left content-shadow">flag</i>
+                        </span>
+                        <br>
+                        <span>
+                            <p class="content-shadow-2 large-font">
+                                The Madutch Group is determine to contribute to the economy of the country by aiding the government's initiatives in community development project, market growth, profitability, employee well being and positive client sentiments. The Madutch Group is deter mined to transfer skills sets to persons who want to excel, providing homes of quality, assist in elevating poverty stricken areas and contribute to the safety of our country.
+                            </p>
+                        </span>                        
+                    </div>
+                </div>
+    
+                <br>
+                <br>
+    
+                <!-- <div class="container"> -->
+                <div class="row">
+                    <div class="col s12 m6 l7 content-shadow-2">
+                        <b class="bold-font-weight big-size deep-orange-text text-darken-4 content-shadow" id="vision">Vision</b>
+                        <span>
+                            <i class="bold-font-weight big-size align-cam material-icons indigo-text text-darken-4 left content-shadow">camera_video</i>
+                        </span>
+                        <br>
+                        <span>
+                            <p class="content-shadow-2 large-font">
+                                The Madutch Group aims in being the leading service provider within each segments industry expanding within RSA and the rest of Africa, sustainable growth and improving customer satisfaction. One of the groups key focus is to rectify our countries imbalances by adopting the Employment Equity Act focusing on race, gender equality, youth development and comm unity Job creation. By addressing this key element the group determined to ens ure that MADUTCH to the lives of ordinary people.
+                            </p>
+                        </span>                        
+                    </div>
+                </div>
+    
+                <br>
+                <br>
+    
+                
+            </div>
+        </div>
+        <div class="right-align" id="values">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <img src="{% static 'message/Madutch-Values.png' %}" alt="" class="responsive-img">
+                    </div>
                 </div>
             </div>
         </div>
-
-        
-        <div id="contact" class="container">
-            <ul class="collapsible expandable">
-                <li class="active">
-                    <div class="collapsible-header deep-orange-text text-darken-4"><b>Reach us on a call</b></div>
-                    <div class="collapsible-body left-align"><i class="material-icons left indigo-text text-darken-4">phone</i><b>010 745 3949</b></div>
-                </li>
-                <li class="active">
-                    <div class="collapsible-header deep-orange-text text-darken-4"><b>Here's our email address</b></div>
-                    <div class="collapsible-body left-align"><i class="material-icons left indigo-text text-darken-4">email</i><b>madutchgroup@gmail.com</b></div>
-                </li>
-                <li class="active">
-                    <div class="collapsible-header deep-orange-text text-darken-4"><b>You can also pay us a visit right here</b></div>
-                    <div class="collapsible-body left-align"><i class="material-icons left indigo-text text-darken-4">map</i><b>Address - 52 Vorster Avenue Vista Place Suite LG 4, Glenanda, 2091</b></div>
-                </li>
-                <li class="active">
-                    <div class="collapsible-header deep-orange-text text-darken-4"><b>Get more in touch by sending us message</b></div>
-                    <a href="#modal-form" class="collapsible-body left-align btn indigo darken-4 waves-effect waves-lighten modal-trigger"><div class="container"><b>Send us a message</b></div></a>
-                </li>
-            </ul>
-        </div>
     </section>
 
-    <!-- Message Form -->
-    <div class="row">
-        <div class="modal" id="modal-form">
-            <form name="message_form" method="POST" class="col s12">
-                {% csrf_token %}
-                <div class="modal-content">
-                    <div class="row">
-                        <div class="row">
-                            <div class="input-field col s6 m6 l6">
-                                {{form.first_name}}
-                            </div>
-                            <div class="input-field col s6 m6 l6">
-                                {{form.last_name}}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons indigo-text text-darken-4 prefix">phone</i>
-                                {{form.phone_number}}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons indigo-text text-darken-4 prefix">email</i>
-                                {{form.email}}
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons indigo-text text-darken-4 prefix">mode_edit</i>
-                                {{form.message}}</textarea>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" name="action" onclick="M.toast({html:'Message submitted'}, 'rounded')" class="btn deep-orange darken-4 waves-effect waves-lighten">Send<i class="material-icons right">send</i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+           
     
 {% endblock content %}
