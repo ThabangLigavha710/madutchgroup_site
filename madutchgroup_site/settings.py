@@ -32,9 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 # DEBUG = False
-DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
 # ALLOWED_HOSTS = ['https://madutchgroup-site1.onrender.com', '127.0.0.1']
@@ -98,17 +98,17 @@ WSGI_APPLICATION = 'madutchgroup_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'aBeBeF2-E6116-df3C634FAdDdg*FG4f',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '46889',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'railway',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'aBeBeF2-E6116-df3C634FAdDdg*FG4f',
+        # 'HOST': 'viaduct.proxy.rlwy.net',
+        # 'PORT': '46889',
     }
 }
 
 database_url = os.environ.get('DATABASE_URL')
-# DATABASES['default'] = dj_database_url.parse(database_url)
+DATABASES['default'] = dj_database_url.parse(database_url)
 # DATABASES['default'] = dj_database_url.parse('postgres://madutch_database_user:brG4oMzgxlcSL3LwXXSVQQcW28lFQAqF@dpg-cmcl2l7109ks7390ioj0-a.oregon-postgres.render.com/madutch_database')
 
 

@@ -22,4 +22,6 @@ def rename_file(path, image_name, number):
             filename = '{}.{}'.format(instance.pk, ext)
         # return the whole path to the file
         return os.path.join(path, filename)
-    return
+    
+    # Return the function without "wrapper" when doing migrations
+    return wrapper

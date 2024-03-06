@@ -11,3 +11,7 @@ def property_development(request):
 
 def consulting(request):
     return render(request, "subsidiary/consulting.html", {'title': 'Consulting'})
+
+
+def cleaning(request):
+    return render(request, "subsidiary/cleaning.html", {'title': 'Cleaning'})

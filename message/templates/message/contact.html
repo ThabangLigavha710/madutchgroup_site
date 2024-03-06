@@ -16,7 +16,7 @@
         .box{
             width: 100%;
             height: auto;
-            margin-top: 20%;
+            margin-top: 15%;
             margin-bottom: auto;
             margin-left: auto;
             margin-right: auto;
@@ -53,31 +53,35 @@
             margin-left: 14px;
         }
 
-        .animate::before{
+        .f-weight{
+        font-size: 10vw;
+    }
+
+        /* .animate::before{
             content: attr(data-text);
             position: absolute;
             color: #bf360c;
             width: 0;
             height: 50%;
-            -webkit-text-stroke: transparent;
+            -webkit-text-stroke: transparent; */
             /* border-right: 2px solid #bf360c; */
-            overflow: hidden;
+            /* overflow: hidden;
             animation: animate 7s linear;
 
-        }
+        } */
 
-        .animate::after{
+        /* .animate::after{
             content: attr(data-text);
             position: absolute;
             color: #1a237e;
             width: 0;
             height: 50%;
-            -webkit-text-stroke: transparent;
+            -webkit-text-stroke: transparent; */
             /* border-right: 2px solid #bf360c; */
-            overflow: hidden;
+            /* overflow: hidden;
             animation: animate 7.1s linear;
 
-        }
+        } */
 
         
 
@@ -93,12 +97,12 @@
     <section>
         <div class="parallax-container">
             <div class="parallax">
-                <img src="{% static 'media/home_images/home_image_3.jpg' %}" id="home-img" class="responsive-img">
+                <img src="{% static 'media/home_images/home_image_3.png' %}" id="home-img" class="responsive-img">
             </div>
             <div class="container">
-                <div class="box">
+                <div class="box center-align">
                     <div class="col s12 m12 l12">
-                        <h1 data-text="Welcome to our contact page" class="text-shadow animate white-text center-align bold-font-weight">Welcome to our contact page</h1>
+                        <h1 data-text="Welcome to our contact page" class="text-shadow animate white-text center-align f-weight bold-font-weight">Contact Us!</h1>
                     </div>
                 </div>
             </div>
@@ -109,8 +113,8 @@
         <div class="card z-depth-0">
             <div class="card-content left-align">
                 <!-- <div class="container"> -->
-                    <h1 class="left-align bold-font-weight indigo-text text-darken-4 content-shadow">Contact</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">Us</h1>
-                        <hr class="indigo left-align" style="width: 23%; height: 20px; position: relative; margin-left: 1px;">
+                    <h1 class="left-align bold-font-weight indigo-text text-darken-4 content-shadow">Contact</h1><span><h1 class="bold-font-weight deep-orange-text text-darken-4 content-shadow">&nbsp;Us</h1>
+                        <hr class="indigo left-align" style="width: 24.3%; height: 20px; position: relative; margin-left: 1px;">
                     </span>
                 <!-- </div> -->
             </div>
@@ -166,20 +170,20 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="input-field col s12">
+                                        <div class="input-field">
                                             <i class="material-icons indigo-text text-darken-4 prefix">phone</i>
                                             {{form.phone_number}}
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="input-field col s12">
+                                        <div class="input-field">
                                             <i class="material-icons indigo-text text-darken-4 prefix">email</i>
                                             {{form.email}}
                                         </div>
                                     </div>
             
                                     <div class="row">
-                                        <div class="input-field col s12">
+                                        <div class="input-field">
                                             <i class="material-icons indigo-text text-darken-4 prefix">mode_edit</i>
                                             {{form.message}}</textarea>
                                         </div>
