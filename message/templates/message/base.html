@@ -55,7 +55,6 @@
         .bold-font-weight{
             font-weight: bolder;
             display: inline-flex;
-            /* margin-left: 1%; */
         }
 
         .alignment{
@@ -166,26 +165,22 @@
 
     <!-- Dropdown menu on large screens -->
     <ul class="dropdown-content" id="dropdown-large">
-        <!-- <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li> -->
-        <li><a href="{% url 'madutch-property' %}" data-target="construction" class="indigo-text text-darken-4">Property Development</a></li>
-        <li><a href="{% url 'madutch-consulting' %}" data-target="supplies" class="indigo-text text-darken-4">Consulting</a></li>
-        <li><a href="{% url 'madutch-cleaning' %}#" data-target="cleaning" class="indigo-text text-darken-4">Cleaning & Upholstery</a></li>
-        <li><a href="#!" data-target="" class="indigo-text text-darken-4">Manufacturing</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#landscaping" data-target="landscaping" class="indigo-text text-darken-4">Landscaping</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4">General Supplies</a></li>
-        <!-- <li><a href="#!" data-target="" class="indigo-text text-darken-4">Consulting</a></li> -->
+        <li><a href="{% url 'madutch-property' %}" data-target="construction" class="deep-orange-text text-darken-4">Property Development</a></li>
+        <li><a href="{% url 'madutch-consulting' %}" data-target="supplies" class="deep-orange-text text-darken-4">Consulting</a></li>
+        <li><a href="{% url 'madutch-cleaning' %}#" data-target="cleaning" class="deep-orange-text text-darken-4">Cleaning & Upholstery</a></li>
+        <li><a href="{% url 'madutch-landscaping' %}" data-target="landscaping" class="deep-orange-text text-darken-4">Landscaping</a></li>
+        <li><a href="{% url 'madutch-manufacturing' %}" data-target="" class="deep-orange-text text-darken-4">Manufacturing</a></li>
+        <li><a href="{% url 'madutch-supplies' %}" data-target="supplies" class="deep-orange-text text-darken-4">General Supplies</a></li>
     </ul>
 
     <!-- Dropdown menu on medium and small screens -->
     <ul class="dropdown-content" id="dropdown-med-small">
-        <!-- <li><a href="{% url 'madutch-subsidiary' %}" class="indigo-text text-darken-4 hoverable-orange">Subsidiary Divisions</a></li> -->
-        <li><a href="{% url 'madutch-subsidiary' %}#construction" data-target="construction" class="indigo-text text-darken-4 hoverable-orange">Property Development</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#cleaning" data-target="cleaning" class="indigo-text text-darken-4 hoverable-orange truncate tooltipped" data-tooltip="Cleaning & Upholstery Cleaning Services">Cleaning & Upholstery Cleaning Services</a></li>
-        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Manufacturing</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#landscaping" data-target="landscaping" class="indigo-text text-darken-4 hoverable-orange">Landscaping</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#supplies" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">General Supplies</a></li>
-        <li><a href="#!" data-target="" class="indigo-text text-darken-4 hoverable-orange">Consulting</a></li>
-        <li><a href="{% url 'madutch-subsidiary' %}#financial" data-target="supplies" class="indigo-text text-darken-4 hoverable-orange">Financial Services</a></li>
+        <li><a href="{% url 'madutch-property' %}" data-target="construction" class="indigo-text text-darken-4">Property Development</a></li>
+        <li><a href="{% url 'madutch-consulting' %}" data-target="supplies" class="indigo-text text-darken-4">Consulting</a></li>
+        <li><a href="{% url 'madutch-cleaning' %}#" data-target="cleaning" class="indigo-text text-darken-4">Cleaning & Upholstery</a></li>
+        <li><a href="{% url 'madutch-landscaping' %}" data-target="landscaping" class="indigo-text text-darken-4">Landscaping</a></li>
+        <li><a href="{% url 'madutch-manufacturing' %}" data-target="" class="indigo-text text-darken-4">Manufacturing</a></li>
+        <li><a href="{% url 'madutch-supplies' %}" data-target="supplies" class="indigo-text text-darken-4">General Supplies</a></li>
     </ul> 
 
 
@@ -200,7 +195,7 @@
     {% block content%}{% endblock %}
     
 
-
+        
     <script src="{% static 'message/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'message/materialize.min.js' %}"></script>
     <script>
@@ -225,7 +220,7 @@
             $('.carousel.carousel-slider').carousel({
                 fullWidth:true,
                 autoplay: true
-            })
+            });
             $('.modal').modal();
             $('input.autocomplete').autocomplete({
                 data: {

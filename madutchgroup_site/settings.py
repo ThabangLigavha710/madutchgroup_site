@@ -98,17 +98,13 @@ WSGI_APPLICATION = 'madutchgroup_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'railway',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'aBeBeF2-E6116-df3C634FAdDdg*FG4f',
-        # 'HOST': 'viaduct.proxy.rlwy.net',
-        # 'PORT': '46889',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
-database_url = os.environ.get('DATABASE_URL')
-DATABASES['default'] = dj_database_url.parse(database_url)
+# database_url = os.environ.get('DATABASE_URL')
+# DATABASES['default'] = dj_database_url.parse(database_url)
 # DATABASES['default'] = dj_database_url.parse('postgres://madutch_database_user:brG4oMzgxlcSL3LwXXSVQQcW28lFQAqF@dpg-cmcl2l7109ks7390ioj0-a.oregon-postgres.render.com/madutch_database')
 
 

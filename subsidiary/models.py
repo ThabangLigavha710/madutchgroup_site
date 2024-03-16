@@ -131,3 +131,16 @@ class BusinessConsultingImage(models.Model):
 
     def __self__(self):
         return f'{self.user.username} BusinessConsultingImage'
+
+
+class ManufacturingImage(models.Model):
+    user = models.OneToOneField(User, default=1, on_delete=models.CASCADE)
+    Welcome_Image = models.ImageField(default='default.jpg', upload_to=rename.rename_file('manufacturing_images','welcome_image', 0))
+    manufacturing_1 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('manufacturing_images','manufacturing_image', 1))
+    manufacturing_2 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('manufacturing_images','manufacturing_image', 2))
+    manufacturing_3 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('manufacturing_images','manufacturing_image', 3))
+    manufacturing_4 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('manufacturing_images','manufacturing_image', 4))
+    manufacturing_5 = models.ImageField(default='default.jpg', upload_to=rename.rename_file('manufacturing_images','manufacturing_image', 5))
+
+    def __self__(self):
+        return f'{self.user.username} ManufacturingImage'

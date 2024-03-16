@@ -9,6 +9,9 @@ import random
 
 def rename_file(path, image_name, number):
 
+    # wrapper_return = False
+    wrapper_return = True
+
     def wrapper(instance, filename):
         
         ext = filename.split('.')[-1]
@@ -24,4 +27,7 @@ def rename_file(path, image_name, number):
         return os.path.join(path, filename)
     
     # Return the function without "wrapper" when doing migrations
-    return wrapper
+    if wrapper_return:
+        return wrapper
+    else:
+        return

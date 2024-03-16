@@ -1,0 +1,134 @@
+{% extends 'message/base.html' %}
+{% block content %}
+
+{% load static %}
+
+<style>
+    #img-size{
+        height: 5%px;
+        width: 10%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .img-3{
+        height: 274px;
+        width: 410px;
+    }
+
+    .slider{
+        z-index: 1;
+    }
+
+    .content-shadow{
+        text-shadow: -12px 7px 30px grey;
+    }
+
+    #home-img{
+            width: 100%;
+            /* height: 100%; */
+        }
+
+    .content-shadow-2{
+        text-shadow: -12px 7px 30px rgba(128, 128, 128, 0.5);
+    }
+
+    .f-weight{
+        font-size: 12vw;
+    }
+
+
+</style>
+
+<section>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="{% static 'media/landscaping_images/welcome_image_0.jpg' %}" id="home-img" class="responsive-img">
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="center-align col s12 m12 l12">
+                    <span><br></span>
+                    <span><br></span>
+                    <!-- <span><br></span> -->
+                    <h1 data-text="Property Development" class="text-shadow white-text animate center-align f-weight bold-font-weight content-shadow-2">Landscaping</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Property Development -->
+<section id="construction">
+    <div class="card z-depth-0">
+        <div class="card-content z-depth-0 left-align">
+            
+            <h1 class="left-align bold-font-weight deep-orange-text text-darken-4 content-shadow">Services</h1>
+            <hr class="indigo darken-4 left-align" style="width: 18%; height: 20px; position: relative; margin-left: 1px;">
+            </span>
+
+            <br>
+            <br>
+
+            <h3 class="bold-font-weight">We offer services in:</h3>
+
+            <br>
+            <br>
+
+            <h5 class="bold-font-weight indigo-text text-darken-4">Home and Commercial</h5>
+            <div class="divider"></div>
+
+            <br>
+            <br>
+
+            <ul class="left-align">
+                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                <li><h6 id="align-up" class="bold-font-weight">Landscape Design</h6></li>
+                <br>
+                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                <li><h6 id="align-up" class="bold-font-weight">Lawn Maintenance</h6></li>
+                <br>
+                <i class="material-icons deep-orange-text text-darken-4 left">star</i>
+                <li><h6 id="align-up" class="bold-font-weight">Water Management</h6></li>
+                <br>
+            </ul>
+
+            <br>
+            <br>
+
+            <div class="card">
+                <div class="center-align">
+                    <h3 class="bold-font-weight">Gallery</h3>
+                </div>
+                <div class="row">
+                    <div class="card z-depth-0 col s12 m6 l4">
+                        <img src="{% static 'media/landscaping_images/landscaping_image_1.jpg' %}" alt="" id="img-3" class="materialboxed responsive-img">
+                    </div>
+                    <div class="card z-depth-0 col s12 m6 l4">
+                        <img src="{% static 'media/landscaping_images/landscaping_image_2.jpg' %}" alt="" id="img-3" class="materialboxed responsive-img">
+                    </div>
+                    <div class="card z-depth-0 col s12 m6 l4">
+                        <img src="{% static 'media/landscaping_images/landscaping_image_3.jpg' %}" alt="" id="img-3" class="materialboxed responsive-img">
+                    </div>
+                    <div class="card z-depth-0 col s12 m6 l4">
+                        <img src="{% static 'media/landscaping_images/landscaping_image_4.jpg' %}" alt="" id="img-3" class="materialboxed responsive-img">
+                    </div>
+                    <div class="card z-depth-0 col s12 m6 l4">
+                        <img src="{% static 'media/landscaping_images/landscaping_image_5.jpg' %}" alt="" id="img-3" class="materialboxed responsive-img">
+                    </div>
+
+                    <div class="card z-depth-0 col s12 m6 l4">
+                        <img style="width: 100%; height: 50%; margin-top: 20%;" src="{% static 'media/logo_images/logo_image_1.png' %}" alt="" id="img-3" class="materialboxed responsive-img">
+                    </div>
+
+                    <div class="col s12 m12 l12">
+                        <p class="grey-text text-darken-3">Images by Freepik (<a href="https://www.freepik.com/" target="_blank" class="blue-text text-darken-3">www.freepik.com</a>)</p>   
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

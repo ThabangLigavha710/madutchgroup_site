@@ -15,3 +15,15 @@ def consulting(request):
 
 def cleaning(request):
     return render(request, "subsidiary/cleaning.html", {'title': 'Cleaning'})
+
+
+def landscaping(request):
+    return render(request, "subsidiary/landscaping.html", {'title': 'Landscaping'})
+
+
+def manufacturing(request):
+    return render(request, "subsidiary/manufacturing.html", {'title': 'Manufacturing'})
+
+
+def general_supplies(request):
+    return render(request, "subsidiary/supplies.html", {'title': 'General Supplies'})
