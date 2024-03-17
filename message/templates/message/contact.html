@@ -44,54 +44,29 @@
             position: relative;
         }
         
-        /* #map{
-            margin-left: -120px;
-            
-        } */
 
         #contact-details{
             margin-left: 14px;
         }
 
         .f-weight{
-        font-size: 10vw;
+        font-size: 12vmax;
     }
 
-        /* .animate::before{
-            content: attr(data-text);
-            position: absolute;
-            color: #bf360c;
-            width: 0;
-            height: 50%;
-            -webkit-text-stroke: transparent; */
-            /* border-right: 2px solid #bf360c; */
-            /* overflow: hidden;
-            animation: animate 7s linear;
+    @media only screen and (min-width: 992px){
+        .medium{
+            display: none !important;
+        }
+    }
 
-        } */
+    @media only screen and (max-width: 600px){
+        .medium{
+            display: none !important;
+        }
+    }
 
-        /* .animate::after{
-            content: attr(data-text);
-            position: absolute;
-            color: #1a237e;
-            width: 0;
-            height: 50%;
-            -webkit-text-stroke: transparent; */
-            /* border-right: 2px solid #bf360c; */
-            /* overflow: hidden;
-            animation: animate 7.1s linear;
 
-        } */
-
-        
-
-        /* #contact-form{
-            margin-right: -100px;
-            padding-left: -200px;
-            /* margin-left: 200px;
-         }  */
-
-    </style>
+</style>
 
     <!-- Home Section -->
     <section>
@@ -198,16 +173,43 @@
                 </div>
                     
             </div>
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <div id="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.6755118926503!2d28.0368419754176!3d-26.272192777034814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f4253c37597%3A0x9902464eb34da42d!2s52%20Vorster%20Ave%2C%20Glenanda%2C%20Johannesburg%20South%2C%202091!5e0!3m2!1sen!2sza!4v1708961399079!5m2!1sen!2sza" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="hide-on-med-and-down">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.6755118926503!2d28.0368419754176!3d-26.272192777034814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f4253c37597%3A0x9902464eb34da42d!2s52%20Vorster%20Ave%2C%20Glenanda%2C%20Johannesburg%20South%2C%202091!5e0!3m2!1sen!2sza!4v1708961399079!5m2!1sen!2sza" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="medium">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.675661726124!2d28.03480347126329!3d-26.272187915967706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f4253c37597%3A0x9902464eb34da42d!2s52%20Vorster%20Ave%2C%20Glenanda%2C%20Johannesburg%20South%2C%202091!5e0!3m2!1sen!2sza!4v1710618010070!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hide-on-med-and-up">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.675661726124!2d28.03480347126329!3d-26.272187915967706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f4253c37597%3A0x9902464eb34da42d!2s52%20Vorster%20Ave%2C%20Glenanda%2C%20Johannesburg%20South%2C%202091!5e0!3m2!1sen!2sza!4v1710618010070!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
         <!-- </div> -->
     </section>
